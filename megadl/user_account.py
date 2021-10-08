@@ -67,7 +67,7 @@ async def uptomega(client: Client, message: Message):
     await megaupmsg.edit("**Trying to Upload to Mega.nz**")
     uploadfile = m.upload(f"{toupload}")
     link = m.get_upload_link(uploadfile)
-    await megaupmsg.edit(f"**Successfully Uploaded To Mega.nz** \n\n**Link:** `{link}` \n\n**Powered by @NexaBotsUpdates**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Mega.nz Link 📥", url=f"{link}")]]))
+    await megaupmsg.edit(f"**Successfully Uploaded To Mega.nz** \n\n**Link:** `{link}` \n\n**Powered by @KOT_BOTS**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Mega.nz Link 📥", url=f"{link}")]]))
     os.remove(toupload)
   except Exception as e:
     await megaupmsg.edit(f"**Error:** `{e}`")
@@ -112,7 +112,7 @@ async def importurlf(_, message: Message):
       import_file = m.import_public_url(msg_text)
       imported_link = m.get_upload_link(import_file)
       await importing_msg.delete()
-      await message.reply_text(f"**Successfully Imported 😌** \n\n**Link:** `{imported_link}` \n\n**Powered by @NexaBotsUpdates**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Imported Link 📥", url=f"{imported_link}")]]))
+      await message.reply_text(f"**Successfully Imported 😌** \n\n**Link:** `{imported_link}` \n\n**Powered by @KOT_BOTS**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Imported Link 📥", url=f"{imported_link}")]]))
     except Exception as e:
       await message.reply_text(f"**Error:** `{e}`")
 
